@@ -10,8 +10,8 @@ for (let i = 0; i < 10; i++) {
 }
 // Comparator similar to java
 numbers.sort((a, b) => a - b);
-var max = numbers[0];
-var min = numbers[numbers.length-1];
+var max = numbers[1];
+var min = numbers[numbers.length-2];
 
 
 console.log("Array: " + numbers);
