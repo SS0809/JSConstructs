@@ -8,38 +8,12 @@ var numbers = [];
 for (let i = 0; i < 10; i++) {
     numbers.push(Math.floor(Math.random() * 900) + 100);
 }
+// Comparator similar to java
+numbers.sort((a, b) => a - b);
 var max = numbers[0];
-var second_max = numbers[0];
-var min = numbers[0];
-var second_min = numbers[0];
-for(let i=0;i<numbers.length;i++)
-{
-    if(second_max < numbers[i])
-    {
-        if(max < numbers[i])
-        {
-            second_max = max;
-            max = numbers[i];
-        }
-        else
-        {
-            second_max = numbers[i];
-        }
-    }
-    if(second_min > numbers[i])
-    {
-        if(min > numbers[i])
-        {
-            second_min = min;
-            min = numbers[i];
-        }
-        else
-        {
-            second_min = numbers[i];
-        }
-    }
-}
+var min = numbers[numbers.length-1];
+
 
 console.log("Array: " + numbers);
-console.log("Second Largest: " + second_max);
-console.log("Second Smallest: " + second_min);
+console.log("Second Largest: " + max);
+console.log("Second Smallest: " + min);
